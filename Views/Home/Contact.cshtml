@@ -1,0 +1,75 @@
+﻿
+<head>
+    <style>
+        
+    </style>
+</head>
+
+<br />
+<!-- Jumbotron -->
+<div class="p-5 text-center bg-image rounded-3" style=" background-image: url('https://wallpaperaccess.com/full/6191155.jpg');
+      background-size: contain;
+      height: 250px;
+
+">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3" style="color:white">Çontact Us</h1>
+                @*<a class="btn btn-outline-light btn-lg" href="#!" role="button">LEARN MORE</a>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="background-color: white">
+    <h3 style="color:darkgray"><b>Contact Us</b></h3>
+    <p style="font-size:15px">
+        We love hearing from you. <br />
+        If you have any questions or inquires about Literacy Boost, you can call us on
+          <a href="tel:047-543-2695">047-543-2695</a> or leave us a message by filling in the form provided below.
+        <br />
+    </p>
+
+    <br />
+    <div class=" container" style="font-size:16px">
+        <form style="margin:5px; width: 280px; color:darkgray">
+            <label for="firstname">First Name: </label> &nbsp;
+            <input type="text" class="form-control input-sm" id="firstname" name="firstname" placeholder="First Name">
+            <br />
+            <label for="lname">Last Name: </label> &nbsp;
+            <input type="text" class="form-control input-sm" id="lname" name="lastname" placeholder="Last Name">
+            <br />
+            <label for="email">Email Address: </label> &nbsp;
+            <input type="email" class="form-control input-sm" id="email" name="lastname" placeholder="Email Address">
+            <br />
+            <label for="subject">Message: </label> &nbsp;
+            <textarea id="subject" class="form-control input-sm" name="subject" placeholder="Write your message here..." style="height:200px;"></textarea>
+            <br />
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                Join Our Newsletter
+            </label>
+
+            <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#centralModalSm">Send message</button>
+            
+        </form>
+       
+        @*Modal*@
+        <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body">
+                        Message sent!
+                    </div>
+                    <!--Footer-->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

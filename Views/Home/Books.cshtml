@@ -1,0 +1,66 @@
+﻿@using INF_272_HomeworkAssignment.Models;
+@model List<ShortStory> 
+
+<style>
+    #thumbnail{
+        width:250px;
+        height:200px;
+    }
+
+</style>
+<br />
+
+<div class="row">
+    @foreach (ShortStory item in Model)
+    { 
+        
+        <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" id="thumbnail" src="~/Media/@item.PicPath" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">@item.Title</h4>
+
+                    <a href="~/Media/books/@item.PATH" class="btn btn-primary">Read</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                        Write review
+                    </button>
+                    <br />
+                    <button type="button" class="btn btn-default">
+                        @*// download button*@
+                        @Html.ActionLink("Download", "DownloadFile",
+                         new { fileName = item.PATH })
+
+
+                    </button>
+
+
+                </div>
+            </div>
+            
+
+        </div>
+        }
+
+    </div>
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Write review</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="subject" class="form-control input-sm" name="subject" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
